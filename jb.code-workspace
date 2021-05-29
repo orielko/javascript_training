@@ -1,0 +1,11 @@
+{
+	"folders": [
+        {
+            "name": "JB",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "lesson2"
+    }
+}
