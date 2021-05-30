@@ -10,7 +10,7 @@ function doSomething(){
     console.log(pelement.innerHTML,pelement.innerHTML.length);
 }
 
-//DOM - Document Object Model, for every html tag, an object is created on memory - a tree of objects,
+//Document Object Model -> DOM , for every html tag, an object is created on memory - a tree of objects,
 //we can reach the elements on the DOM from our JS
 
 //excercise:

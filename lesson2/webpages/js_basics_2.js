@@ -24,7 +24,7 @@ function f(){
 }
 f();
 
-//JS Hoisting will look like:
+//javascript Hoisting will look like:
 function f_after_js_hoisting(){
     var a,b,c;
     console.log("a",a); //undefined
@@ -141,7 +141,7 @@ try{
 //throw - with good design , if an invalid arrgument is sent, we should not handle the arrgument validation inside the function
 //we should throw an exception instead
 function getVat(price){
-    if(price<0){ //NEVER handle this inside the function like this If example
+    if(price<0){ //Never handle this inside the function like this If example
         //console.log("illegal price");
         throw new Error("Illegal price, price can't be negative.");
         //return;

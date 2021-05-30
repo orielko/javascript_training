@@ -22,7 +22,7 @@ console.log(c);
 //3. Poor object oriented
 //All of those are fixed in TypeScript
 
-//JS types: 7 types
+//JavaScript types: 7 types
 //the value determine which variable type the variable will be
 let d=123;
 console.log("Number:",d,typeof d);
@@ -73,7 +73,7 @@ console.log(null==undefined);//true
 console.log(false==0);//true
 console.log(true==1);//true
 
-//JS will enforce the types, therefore it will convert the string to number
+//JavaScript will enforce the types, therefore it will convert the string to number
 console.log(78=="78");//true
 
 //Literal Objects:

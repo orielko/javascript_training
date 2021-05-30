@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="switch.js"></script>
+
+    <title>Switch and conditions</title>
+
+</head>
+<body>
+    <div>
+        <p>
+            קילטו מהמשתמש ציון ע"י תיבת prompt והציגו את הציון כביטוי הערכה לפי החוקיות הבאה: 
+            אם הציון שנקלט הוא מ-0 (כולל) ועד 50 (לא כולל), הציגו: "נכשל".
+            אם הציון שנקלט הוא מ-50 (כולל) ועד 60 (לא כולל), הציגו: "בלתי מספיק".
+            אם הציון שנקלט הוא מ-60 (כולל) ועד 70 (לא כולל), הציגו: "מספיק".
+            אם הציון שנקלט הוא מ-70 (כולל) ועד 80 (לא כולל), הציגו: "כמעט טוב".
+            אם הציון שנקלט הוא מ-80 (כולל) ועד 90 (לא כולל), הציגו: "טוב".
+            אם הציון שנקלט הוא מ-90 (כולל) ועד 100 (כולל), הציגו "טוב מאוד".
+            עבור כל קלט אחר, הציגו: "שגיאה, יש להכניס ציון בין 0 ל-100".
+            
+            •	יש להניח שאכן המשתמש מכניס מידע כלשהו.
+            
+            •	אין להשתמש במשפט if-else בתרגיל זה אלא רק case
+            
+            •	אין לבצע 100 case-ים...
+        </p>
+    </div>
+    <div>
+        comments:
+        <li>
+            javascript will look for exact match on the switch condition, if we want a range we need it to have 'true' value on the switch, then it will search for the first condition which returns true
+        </li>
+    </div>
+</body>
+</html>
