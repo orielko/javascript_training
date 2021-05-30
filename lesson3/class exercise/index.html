@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage exercise</title>
+    <script src="ex1.js" defer></script>
+    <script src="ex2.js" defer></script>
+</head>
+<body onload="initUI()">
+    <pre dir="rtl">
+תרגיל כיתה:
+1. צרו תיבת טקסט לקבלת שם מלא של משתמש
+צרו לחצן שבלחיצה עליו מבצע:
+א. הצגה בהודעה עבור השם המלא שנקלט בתיבה
+ב. שמירה ב-LocalStorage של השם המלא
+בטעינת הדף יש להחזיר בחזרה את השם המלא מהזיכרון המקומי לתיבת הטקסט
+
+2. צרו את הפונקציה הבאה:
+function paintPage(callback){
+    alert("painting the page");
+    callback();// the callback will paint the page in some color
+}
+קראו לפונקציה הזו בצורה הגיונית כך שהדף יצבע בצבע כלשהו
+    </pre>
+    <label>Enter full name:</label>
+    <input type="text" id="fullNameBox">
+    <button onclick="saveData()">Save</button><br>
+    <hr>
+    <label>Color with calling a function on the js</label>
+    <input type="color" onchange=" paintBody()" id="colorPicker"><br>
+    <label>Color with calling a function on the HTML</label>
+    <input type="color" onchange=" paintPage(()=>{document.body.style.backgroundColor=colorPicker2.value});" id="colorPicker2"><br>
+    <label>Color with calling a function on the js</label>
+    <input type="text" onchange=" paintPage(()=>document.body.style.backgroundColor=this.value);" id="colorPicker3"><br>
+    
+</body>
+<!-- The creation of the tags to the DOM is only when the line of the tag is interpreted, in line 19 it will create the DOM object
+therefore we have 3 ways to solve it:
+1.Add onload function for the body- the problem with this, is that this event raised only when the ENTIRE page is loaded (including images- could be slow)
+2.Put the script loading at the end of the page (line 28)
+3.Use inside the script use defer
+-->
+</html>

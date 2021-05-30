@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <h4>BOM functions:</h4>
+    <button onclick="testLocation()">Test location</button> <br>
+    <button onclick="testHistory()">Test history</button> <br>
+    <button onclick="testOpen()">Test open</button> <br>
+    <button onclick="testClose()">Test close</button> <br>
+    <button onclick="testPrint()">Test print</button> <br>
+    <hr>
+    <h4>Cookies:</h4>
+    <button onclick="saveSessionCookies()">Save non persistent (without experation) cookies</button> <br>
+    <button onclick="savePersistentCookies()">Save persistent (always kept in the memory) cookies</button> <br>
+    <button onclick="printCookies()">Print cookies</button> <br>
+    <h4>Session storage: (is not sent to the backend automatically)</h4>
+    <button onclick="saveSessionStorage()">Save session storage</button> <br>
+    <button onclick="printSessionStorage()">Print session storage</button> <br>
+    <hr>
+    <h4>Local storage: (is not sent to the backend automatically)</h4>
+    <button onclick="saveSessionLocalStorage()">Save local storage</button> <br>
+    <button onclick="printSessionLocalStorage()">Print local storage</button> <br>
+    <hr>
+    <h4>Save cookie from inputs</h4>
+    <button onclick="saveCookieFromInput()">Save cookie from user input</button>
+    <i>When we have input from user we should handle also spacial characters</i> <br>
+    <button onclick="loadCookieFromInput()">Print cookies (decoded)</button> <br>
+    <i>If we read it undecoded we might mess up our cookie</i> <br>
+</body>
+<script src="main.js"></script>
+</html>
