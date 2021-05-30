@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and HTML</title>
+</head>
+<body>
+    <div id="container">
+        <img src="calc.png" width="300px">
+        <div>
+            My comments:
+            <li>'name' attribute on an input of 'radio' type is to determine the radio inputs group</li>
+            <li>'for' attribute on a label is for accessability</li>
+        </div>
+        <div style="display: flex;">
+            <input type="number" id="firstNum">
+            <div>
+                <input type="radio" name="mathAction" id="plus" value="plus"><label for="plus">+</label><br>
+                <input type="radio" name="mathAction" id="minus" value="minus"><label for="minus">-</label><br>
+                <input type="radio" name="mathAction" id="multiply" value="multiply"><label for="multiply">*</label><br>
+                <input type="radio" name="mathAction" id="devide" value="devide"><label for="devide">/</label><br>
+            </div>
+            <input type="number" id="secondNum"><button onclick="calculate()">=</button>&nbsp;<div id="result" style="align-self: flex-end;">__________</div>
+        </div>
+        <div id="calcList">
+            
+        </div>
+    </div>
+</body>
+<script src="javascriptAndHTML.js"></script>
+</html>

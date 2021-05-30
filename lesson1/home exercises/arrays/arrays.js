@@ -1,6 +1,6 @@
 "use strict";
-let min = +prompt("Enter the first number");
-let max = +prompt("Enter the second number");
+let min = +prompt("Enter the min number");
+let max = +prompt("Enter the max number");
 let arrPrime = [];
 function isPrime(number) {
     for (let i = 2; i < Math.sqrt(number); i++) {
@@ -15,14 +15,10 @@ for (let i = min; i <= max; i++) {
         primeSum+=i;
     }
 }
+let result=`The Array: [${arrPrime}]
+The array sum: ${primeSum}
+The array average: ${primeSum/arrPrime.length}
+(calculated in: ${new Date})
+`
 
-alert(`The Array: ${arrPrime}
-    The array sum: ${primeSum}
-    The array average: ${primeSum/arrPrime.length}
-`);
-
-//TODO: check why it's not working
-// let primeRes=document.getElementById("primeResult");
-// debugger;
-// primeRes.innerText="lala1";
-// primeResult.innerText="lala";
+primeResult.innerText=result;
