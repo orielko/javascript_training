@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <pre>
+        •	בצעו את התרגילים הבאים ע"י תחביר של Anonymous Function וגם ע"י תחביר של Arrow Function:
+
+1.	צרו פונקציה א' המציגה את שמכם על המסך.
+צרו פונקציה ב' המקבלת callback לסוגריים וקוראת לה בצורה הבאה: callback()
+קיראו לפונקציה ב' ושילחו לה לסוגריים את פונקציה א'.
+
+2.	להלן פונקציה: 
+function cool(callback) {
+	callback();
+}
+קיראו לה ושילחו לה פונקציה שמציגה מספר רנדומלי כלשהו על המסך.
+
+3.	להלן פונקציה: 
+function nice(callback) {
+	callback(42);
+}
+קיראו לה ושילחו לה פונקציה שמציגה על המסך את המספר שקיבלה כארגומנט (במקרה הנ"ל זה יהיה 42).
+
+4.	להלן פונקציה: 
+function amazing(callback) {
+	const num = callback(42, 128, 37, 81, 66);
+	document.write(“Num: “ + num);
+}
+קיראו לה ושילחו לה פונקציה שמקבלת חמישה ארגומנטים (במקרה הנ"ל הם יהיו המספרים שבסוגריים), ומציגה אחד מהם על המסך בצורה רנדומלית, לאחר מכן מחזירה את המספר הזה.
+
+5.	להלן פונקציה: 
+function cool(paintCallback) {
+	paintCallback();
+}
+קיראו לה ושילחו לה פונקציה שצובעת את המסך בצע רנדומלי.
+
+6.	להלן פונקציה: 
+function nice(paintCallback) {
+	paintCallback(“Green”);
+}
+קיראו לה ושילחו לה פונקציה שצובעת את המסך בצבע שקיבלה כארגומנט (במקרה הנ"ל זה יהיה ירוק).
+
+7.	להלן פונקציה: 
+function amazing(paintCallback) {
+	constpaintedColor = paintCallback(“Red, “Green”, “Blue”);
+	document.write(“Painted Color: “ + paintedColor);
+}
+קיראו לה ושילחו לה פונקציה שמקבלת שלושה צבעים (במקרה הנ"ל הם יהיו אדום, ירוק וכחול), וצובעת את המסך בצבע אחד משלושת אלו (בצורה רנדומלית). לאחר מכן היא מחזירה את הצבע שבעזרתו צבעה את המסך.
+
+8.	הציגו בכל שנייה מספר רנדומלי על הקונסול. על המספר להיות בין 1 ל-100 כולל קצוות.
+
+    </pre>
+</body>
+</html>
