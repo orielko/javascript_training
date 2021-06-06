@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <script defer src="../../JavaScript Validation Part2/validation.js"></script>
+</head>
+
+<body dir="rtl">
+    <h3>צור קשר</h3>
+    <form action="save.html"  onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>
+                    <label>שם פרטי:</label>
+                </td>
+                <td>
+                    <input type="text" id="firstName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>שם משפחה:</label>
+                </td>
+                <td>
+                    <input type="text" id="lastName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>מין:</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+    
+                    <input type="radio" name="gender" value="male"><label>זכר</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="gender" value="female"><label>נקבה</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="gender" value="other"><label>אחר</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>עיר:</label>
+                </td>
+                <td>
+    
+                    <select name="town" id="town">
+                        <option value="south">דרום</option>
+                        <option value="north">צפון</option>
+                        <option value="center">מרכז</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>הודעה:</label>
+                </td>
+                <td>
+                    <textarea id="message"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="שלח"/>
+                </td>
+                <td>
+                    <button>נקה</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
