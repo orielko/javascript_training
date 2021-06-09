@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async function return</title>
+    <script src="asyncReturn.js"></script>
+</head>
+<body>
+    <label>See the prints on the console log</label><br>
+    <button onclick="test1()">Run async function with action handling inside the async function</button><br>
+    <button onclick="test2()">Run async function with falsy returned value</button><br>
+    <button onclick="test3()">Run async function with callback</button><br>
+    <button onclick="test4()">Run async function with try catch (will not work)</button><br>
+    <button onclick="test5()">Run async function with try catch with success and error callback</button><br>
+    <button onclick="test6()">Run async function example with geolocation</button><br>
+    <button onclick="test7()">Run async function with Promise</button><br>
+    <button onclick="showUserLocation()">Run Promisified function</button><br>
+    
+    <br><br>
+    <i>Notes:</i>
+    <li>By default, every function in JS returns a value, if we don't have a 'return' statement it will return 'undefined'</li>
+    <li>Therefore, async function will return undefined (which is function inside a function basically...)</li>
+    <li>The reason try/catch will not work for async function is that the block of the try is actually finished with no errors and the async function only happens after</li>
+</body>
+</html>

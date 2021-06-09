@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="thisContext.js"></script>
+</head>
+<body>
+    <button id="myButtonIFFI" onclick="paintMe()">myButtonIFFI: paint me- function is not defined (inside an IFFI)- should print error on console</button><br>
+    <button id="myButton">myButton: paint me</button><br>
+    <button id="myButton2">myButton2: paint me</button><br>
+    <button id="myButton3">myButton3: paint me</button><br>
+    <button id="myButton4">myButton4: paint me after delay- function() syntax- should print error on the console</button><br>
+    <button id="myButton5">myButton5: paint me after delay- function() syntax FIX</button><br>
+    <button id="myButton6">myButton6: paint me after delay- arrow function syntax</button><br>
+    <button id="myButton7">myButton7: paint me after delay- with bind</button><br>
+    <button id="myButton8">myButton8: paint me after delay- case that arrow function 'this' will not work ("this" is "undefined")</button><br>
+    <button id="myButton9">myButton9: paint me after delay- case that arrow function 'this' will not work ("this" is "window")</button><br>
+</body>
+</html>

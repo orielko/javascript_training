@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="main.js"></script>
+</head>
+<body dir="rtl">
+    <label>1.</label>
+    <pre>
+        צרו פונקציה בשם getRandomEvenNumberAfterDelay
+        על הפונקציה להמתין על ידי setTimeout שלוש שניות ואז להגריל מספר רנדומלי בין 0 ל100
+        אם יצא מספר זוגי - יש לדווח אותו על ידי sucessCallback
+        אם יצא מספר אי זוגי- יש לדווח שגיאה כי לא הצלחנו
+        בלחצן קראו לפונקציה:
+        הציגו על הדף על ידי  את המספר הזוגי שהוגרל במקרה והייתה הצלחה או באלרט את הודעת השגיאה במידה והיה כישלון
+    </pre>
+    <label>2.</label>
+<pre>בצעו את אותו דבר על ידי promise</pre>
+    <label>3.</label>
+<pre>בצעו תרגיל דומה, אך הפעם על הפונקציה getRandomEvenNumberAfterDelay 
+    לקבל סוגריים של מינימום ומקסימום המתארים טווח מספרים ממנו יש לייצר מספר רנדומלי</pre>
+    <label>פתרון:</label>
+    <button onclick="getRandomEvenNumber()">Random</button><br>
+    <button onclick="getRandomEvenNumberWithPromise()">Random with Promise</button><br>
+    <button onclick="getRandomEvenNumberWithPromiseMinMax(5,10)">Random with Promise with max and min</button><br>
+    <button onclick="getRandomNumberWithPromiseAndLimit(100)">Random with Promise with limit and nested Promises</button><br>
+    <button onclick="getRandomNumberWithPromiseAndLimitWithAwaitAsync(30)">Random with Promise with limit,async and await</button><br>
+    <label id="result" style="border:blue; border-width: 2px;border-style: solid;display:block;width:  100px;height: 50px;"></label>
+    <label id="errorResult" style="border:red; border-width: 2px;border-style: solid;display:block;width:  100px;height: 50px;"></label>
+</body>
+</html>
