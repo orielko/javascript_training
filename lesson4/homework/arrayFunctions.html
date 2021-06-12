@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+    <script src="arrayFunctions.js" defer></script>
+</head>
+<body>
+    <pre>
+        Array Functions
+
+1.	צרו מערך מספרים בגודל 20, הכניסו אליו 20 מספרים שלמים רנדומליים, כל מספר בין 1 ל-100.
+הציגו ע"י פונקציות השייכות לאובייקט המערך (כגון forEach, filter, find, map, reduce וכדומה) את הדברים הבאים: 
+א.	את המערך עצמו – כל פריט בשורה נפרדת.
+<div id="ex1Div1">result:<br></div>
+ב.	את המספר הזוגי הראשון.
+<div id="ex1Div2">result:<br></div>
+ג.	את המספר הראשון שגדול מ-50.
+<div id="ex1Div3">result:<br></div>
+ד.	את כל המספרים האי-זוגיים.
+<div id="ex1Div4">result:<br></div>
+ה.	את כל המספרים הגדולים מ-50.
+<div id="ex1Div5">result:<br></div>
+ו.	את האינדקס של המספר הראשון הגדול מ-50.
+<div id="ex1Div6">result:<br></div>
+ז.	עבור כל מספר להציג האם הוא זוגי או אי-זוגי.
+<div id="ex1Div7">result:<br></div>
+ח.	את המספר המינימלי.
+<div id="ex1Div8">result:<br></div>
+ט.	את המספר המקסימלי.
+<div id="ex1Div9">result:<br></div>
+
+2.	צרו מערך ריק. ע"י לולאה הכניסו אליו 20 אובייקטים כאשר כל אובייקט מתאר נקודה במרחב המכילה x ו-y (מיקום הנקודה על ציר x וציר y).
+את הערכים יש להגריל בצורה רנדומלית, כל ערך של x או y הינו מספר רנדומלי בין 0 ל-100 כולל קצוות.
+הציגו ע"י פונקציות השייכות לאובייקט המערך (כגון forEach, filter, find, map, reduce וכדומה) את הדברים הבאים: 
+א.	את המערך עצמו – הצגה של x ו-y– כל זוג בשורה משלו.
+<div id="ex2Div1">result:<br></div>
+
+ב.	את האובייקט הראשון שבו x גדול מ-y.
+<div id="ex2Div2">result:<br></div>
+
+ג.	את האובייקט הראשון שעבורו y גדול מ-50.
+<div id="ex2Div3">result:<br></div>
+
+ד.	את כל האובייקטים שעבורם x הוא אי-זוגי.
+<div id="ex2Div4">result:<br></div>
+
+ה.	את כל האובייקטים שעבורם y גדול מ-50.
+<div id="ex2Div5">result:<br></div>
+
+ו.	את האינדקס של האובייקט הראשון בעל x הגדול מ-50.
+<div id="ex2Div6">result:<br></div>
+
+ז.	עבור כל נקודה – את המרחק מראשית הצירים.
+<div id="ex2Div7">result:<br></div>
+
+ח.	את ה-x המינימלי.
+<div id="ex2Div8">result:<br></div>
+
+ט.	את אובייקט הנקודה בעלת ה-x המינימלי.
+<div id="ex2Div9">result:<br></div>
+
+
+3.	צרו מערך ריק. ע"י לולאה הכניסו אליו 20 אובייקטים כאשר כל אובייקט מתאר פיצה המכילה:
+Diameter (קוטר בס"מ), slices (מספר משולשים), toppings (מספר תוספות), price (מחיר).
+את הערכים יש להגריל בצורה רנדומלית כאשר כל ערך צריך להיות הגיוני (לדוגמה 50 תוספות אינו הגיוני).
+הציגו ע"י פונקציות השייכות לאובייקט המערך (כגון forEach, filter, find, map, reduce וכדומה) את הדברים הבאים: 
+א.	את המערך עצמו – כל אובייקט בשורה נפרדת.
+<div id="ex3Div1">result:<br></div>
+
+ב.	את הפיצה הראשונה ללא תוספות.
+<div id="ex3Div2">result:<br></div>
+
+ג.	את הפיצה הראשונה בעלת מחיר זול מ-30.
+<div id="ex3Div3">result:<br></div>
+
+ד.	את כל הפיצות האישיות (קוטר קטן או שווה ל-20).
+<div id="ex3Div4">result:<br></div>
+
+ה.	את כל הפיצות היקרות (מחיר גדול מ-80).
+<div id="ex3Div5">result:<br></div>
+
+ו.	את כל הפיצות ללא תוספות.
+<div id="ex3Div6">result:<br></div>
+
+ז.	את האינדקס של הפיצה הראשונה בעלת 6 משולשים.
+<div id="ex3Div7">result:<br></div>
+
+ח.	את הרדיוסים של כל הפיצות (רדיוס = קוטר חלקי 2).
+<div id="ex3Div8">result:<br></div>
+
+ט.	עבור כל פיצה – אובייקט חדש המכיל: price (מחיר מקורי) vat (ערך המע"מ של המחיר כאשר המחיר המקורי הוא מחיר כולל מע"מ).
+<div id="ex3Div9">result:<br></div>
+
+י.	את סכום כל מחירי הפיצות.
+<div id="ex3Div10">result:<br></div>
+
+יא.	את המחיר היקר ביותר.
+<div id="ex3Div11">result:<br></div>
+
+יב.	את אובייקט הפיצה בעלת המחיר היקר ביותר.
+<div id="ex3Div12">result:<br></div>
+
+
+בהצלחה 
+
+    </pre>
+</body>
+</html>
