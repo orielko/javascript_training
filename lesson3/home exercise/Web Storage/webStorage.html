@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="webStorage.js"></script>
     <title>Web Storage</title>
 </head>
 <body>
@@ -14,5 +15,7 @@
 בגלישה לאתר הזה בזמן עתידי אחר כלשהו – הציגו מיידית את הצבע האחרון שהמשתמש בחר – גם בתיבת ה-Select וגם כצבע רקע של הדף עצמו.
 לדוגמה, אם המשתמש גולש לאתר בפעם הראשונה Ever, הוא רואה דף לבן. אם הוא בחר בצבע אדום – הוא מיידית רואה צבע רקע אדום על כל הדף. אם הוא סוגר את הדפדפן וגולש שוב לאתר – הוא לא רואה דף לבן, אלא דף אדום – הצבע האחרון שהוא בחר, כולל תיבת ה-Select מציגה לו את הצבע אדום כאופציה הראשונה שמוצגת.
     </pre>
+    <label>solution:</label><br>
+    <input id="pickColorInput" type="color" onmouseout="paintThePage()">
 </body>
 </html>
