@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Function</title>
+    <script src="asynchronousFunction.js" defer></script>
+</head>
+
+<body>
+    <pre>
+        (יש לבצע את התרגילים הללו ללא שימוש ב-Promise)
+1.	כיתבו פקודת הצגה של המילה Start, ולאחריה פקודת הצגה של הזמן הנוכחי ואחריה פקודת הצגה של המילה End (הכל סינכרוני).
+לכן מה שאמורים לראות בסיום ההדפסות יהיה:
+Start
+(הזמן הנוכחי)
+End
+<button onclick="ex1()">Run</button>
+
+2.	בצעו שוב את התרגיל הקודם, אך את הזמן הנוכחי יש להציג בצורה אסינכרונית ע"י המתנה של 3 שניות.
+לכן מה שאמורים לראות בסיום ההדפסות יהיה:
+Start
+End
+(הזמן הנוכחי)
+<button onclick="ex2()">Run</button>
+
+3.	בצעו שוב את התרגיל הקודם, אך במקום להציג את הזמן הנוכחי יש להציג את הזמן שהיה לפני 3 שניות. כלומר הפלט של התרגיל אמור להיות המילה Start ואז המילה End ואז אחרי 3 שניות הצגה של הזמן שהיה לפני 3 שניות.
+לכן מה שאמורים לראות בסיום ההדפסות יהיה:
+Start
+End
+(הזמן שהיה לפני 3 שניות)
+<button onclick="ex3()">Run</button>
+
+4.	הציגו על הדף את המילה Start ואז כעבור 3 שניות מספר רנדומלי בין 0 ל-100, ואז כעבור 5 שניות מספר רנדומלי בין 0 ל-100, ואז כעבור 7 שניות מספר רנדומלי בין 0 ל-100 ואז End.
+כלומר, רק הצגת המספרים הרנדומליים מתבצע באופן אסינכרוני, כל אחד ע"י setTimeout משלו.
+לכן מה שאמורים לראות בסיום ההדפסות יהיה:
+Start
+End
+(מספר רנדומלי בין 0 ל-100)
+(מספר רנדומלי בין 0 ל-100)
+(מספר רנדומלי בין 0 ל-100)
+
+<button onclick="ex4()">Run</button>
+5.	צרו תיבת טקסט ו-div. בטעינת הדף הציגו בכל שנייה בתוך ה-div מספר רנדומלי בין 0 למספר שנמצא בתיבת הטקסט.
+ביצוע פעולה כל שנייה יש לבצע ע"י setInterval.
+האם אפשר תוך כדי פעילות האתר לשנות את המספר שנמצא בתיבת הטקסט כך שהשינוי אכן ישפיע על המספרים הרנדומליים המוצגים?
+<input type="number" value=0 id="inputEx5"><div id="ex5result"></div>
+answer:
+Yes, we changing the text inside the input affects the interval because the interval is taking dynamically the data from the input box
+6.	בגלישה לאתר – שנו את צבע הרקע של הדף לצבע רקע רנדומלי. בצעו זאת בכל שנייה כך שכל שנייה צבע הרקע של הדף ישתנה לצבע רקע רנדומלי.
+<div id="ex6result"></div>
+<button onclick="ex6()">Stop</button>
+
+
+7.	אתגר: כיתבו את הקוד הבא, המורץ בלחיצה על לחצן:
+document.body.style.backgroundColor = "Green";
+alert("Done");
+לפי קוד זה, הדף נצבע לירוק ורק לאחר מכן מופיעה ההודעה Done ב-alert.
+<button onclick="ex7()">Run</button>
+
+א.	האם זה באמת מה שיקרה?
+No
+ב.	אם לא – למה התרחש מה שהתרחש.
+alert is a blocker, therefore it will render the page only after we will click on the alert 
+ג.	אם לא –איך אפשר לתקן את הבעיה כך שבאמת יצבע הדף בירוק ורק לאחר מכן תוצג ההודעה Done?
+we can put the alert to be async using timeout function , so it will happen after the rendering, because the render queue happens before the async callback queue
+<button onclick="ex7b()">Run</button>
+
+8.	צרו פונקציה בשם getRandomNumberAfterDelay הממתינה ע"י setTimeout חמש שניות, ולאחר מכן מחזירה לקוד שקרא לה (ע"י callback) מספר רנדומלי בין 0 ל-100. קיראו לה מלחצן והציגו את המספר המוחזר.
+<button onclick="getRandomNumberAfterDelay((num)=>ex8result.innerText=num)">Run</button><div id="ex8result"></div>
+9.	צרו פונקציה בשם getRandomNumberAfterDelay הממתינה ע"י setTimeout חמש שניות, ולאחר מכן מחזירה לקוד שקרא לה (ע"י callback) מספר רנדומלי בין 0 ל-limit, כאשר limit זה ארגומנט נוסף שהפונקציהgetRandomNumberAfterDelay מקבלת.קיראו לה מלחצן והציגו את המספר המוחזר.
+<button onclick="getRandomNumberAfterDelay((num)=>ex9result.innerText=num,20)">Run</button><div id="ex9result" style="width: 20px;height: 20px;border:solid"></div>
+
+10.	צרו פונקציה בשם getRandomNumberAfterDelay הממתינה ע"י setTimeout חמש שניות, ולאחר מכן מחזירה לקוד שקרא לה (ע"י callback) מספר רנדומלי בין first ל-last, כאשר first ו-last אלו שני ארגומנטים נוספים שהפונקציהgetRandomNumberAfterDelay מקבלת.קיראו לה מלחצן והציגו את המספר המוחזר.
+<button onclick="getRandomNumberAfterDelay((num)=>ex10result.innerText=num,20,10)">Run</button><div id="ex10result" style="width: 20px;height: 20px;border:solid"></div>
+
+11.	צרו פונקציה בשם getEvenRandomNumberAfterDelay הממתינה ע"י setTimeout חמש שניות, ולאחר מכן מחזירה לקוד שקרא לה (ע"י callback) מספר רנדומלי זוגי בין first ל-last, כאשר first ו-last אלו שני ארגומנטים נוספים שהפונקציה getEvenRandomNumberAfterDelay מקבלת. קיראו לה מלחצן והציגו את המספר המוחזר.
+<button onclick="getEvenRandomNumberAfterDelay((num)=>ex11result.innerText=num,20,10)">Run</button><div id="ex11result" style="width: 20px;height: 20px;border:solid"></div>
+
+
+12.	להלן פונקציה:
+function getUserFromServer() {
+    setTimeout(() => {
+// Demo for getting user from the server:
+        const user = { firstName: "Moishe",lastName: "Ufnik"}
+        // "Return" that user to the calling code.
+    }, 4000);
+}
+עליכם לקרוא לפונקציה הזו ולקבל ממנה בחזרה את אובייקט ה-user שהיא "הביאה" מהשרת ולהציג אותו בקונסול. לצורך כך יש כמובן לבצע שינוי או הוספת קוד בפונקציה.
+<button onclick="getUserFromServer((user)=>ex12result.innerText=JSON.stringify(user))">Run</button><div id="ex12result" style="width: 500px;height: 20px;border:solid"></div>
+
+
+
+
+
+
+13.	להלן פונקציה:
+function getGradesFromServer() {
+    setTimeout(() => {
+// Demo for getting grades from the server:
+        const grades = [100, 98, 75, 80, 100, 87];
+        // "Return" that array to the calling code.
+    }, 7000);
+}
+עליכם לקרוא לפונקציה הזו ולקבל ממנה בחזרה את המערך שהיא "הביאה" מהשרת ולהציג אותו על הדף. לצורך כך יש כמובן לבצע שינוי או הוספת קוד בפונקציה.
+<button onclick="getGradesFromServer((grades)=>ex13result.innerText=JSON.stringify(grades))">Run</button><div id="ex13result" style="width: 500px;height: 20px;border:solid"></div>
+
+14.	בלחיצת לחצן, הציגו את מיקום המשתמש (latitude ו-longitude) ב-span.
+אם לא ניתן להציג את מיקום המשתמש, הציגו את הודעת השגיאה.
+<button onclick="getCoorFromUser(
+    (resolve)=>{
+        ex14result.innerText=`${resolve.coords.latitude},${resolve.coords.longitude}`;
+        ex14result.style.borderColor='Black';
+    },
+    (reject)=>{
+        ex14result.innerText=reject.message;
+        ex14result.style.borderColor='Red';
+    }
+    )">Run</button><span id="ex14result" style="width: 500px;height: 20px;border:solid;"></span>
+
+15.	הציגו שעון ב-span על הדף (כל שנייה מציג את השעה)
+הוסיפו קוד כך שבכל שנייה שהשעה מוצגת, צבע הגופן של השעון משתנה לצבע גופן רנדומלי.
+<button onclick="setMyTime((time)=>{
+    ex15result.innerText=time;
+    ex15result.style.color=getRandomColor();
+})">Run</button><div id="ex15result" style="width: 500px;height: 20px;border:solid"></div>
+
+
+
+    </pre>
+</body>
+
+</html>
