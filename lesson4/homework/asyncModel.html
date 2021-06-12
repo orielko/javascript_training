@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Model</title>
+    <script src="asynchronousModel.js"></script>
+</head>
+<body>
+    <pre>
+        Asynchronous Model
+
+1.	צפו בסרטון שבלינק הבא:
+http://latentflip.com/loupe
+<iframe src="http://latentflip.com/loupe
+" height="500px" width="600px"></iframe>
+
+2.	הריצו בסימולטור שבלינק הנ"ל את הקוד הבא והבינו למה הוא מתנהג בצורה שבה הוא מתנהג:
+doWork1();
+doWork2();
+
+function doWork1() {
+console.log("1");
+}
+
+function doWork2() {
+console.log("2");
+    doWork3();
+}
+
+function doWork3() {
+console.log("3");
+    doWork4();
+}
+
+function doWork4() {
+console.log("4");
+}
+<label>answer:</label>
+<iframe src="http://latentflip.com/loupe/?code=ZG9Xb3JrMSgpOw0KZG9Xb3JrMigpOw0KDQpmdW5jdGlvbiBkb1dvcmsxKCkgew0KY29uc29sZS5sb2coIjEiKTsNCn0NCg0KZnVuY3Rpb24gZG9Xb3JrMigpIHsNCmNvbnNvbGUubG9nKCIyIik7DQogICAgZG9Xb3JrMygpOw0KfQ0KDQpmdW5jdGlvbiBkb1dvcmszKCkgew0KY29uc29sZS5sb2coIjMiKTsNCiAgICBkb1dvcms0KCk7DQp9DQoNCmZ1bmN0aW9uIGRvV29yazQoKSB7DQpjb25zb2xlLmxvZygiNCIpOw0KfQ%3D%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" height="500px" width="600px"></iframe>
+The code is interpreted from top to bottom, synchroniusly
+
+
+3.	הריצו בסימולטור שבלינק הנ"ל את הקוד הבא והבינו למה הוא מתנהג בצורה שבה הוא מתנהג:
+setTimeout(doWork1,10);
+doWork2();
+doWork3();
+
+function doWork1() {
+console.log("1");
+}
+
+function doWork2() {
+console.log("2");
+}
+
+function doWork3() {
+console.log("3");
+}
+
+<label>answer:</label>
+doWork1 will be waiting in the webApis queue, so it will continue to execute doWork2 and afterward doWork3, and when it finished with them and the callstack is empty it will run doWork1,
+Even if the timer will be 0 mseconds, it will still always be last, because it will wait on the async queue
+<iframe src="http://latentflip.com/loupe/?code=c2V0VGltZW91dChkb1dvcmsxLDEwKTsNCmRvV29yazIoKTsNCmRvV29yazMoKTsNCg0KZnVuY3Rpb24gZG9Xb3JrMSgpIHsNCmNvbnNvbGUubG9nKCIxIik7DQp9DQoNCmZ1bmN0aW9uIGRvV29yazIoKSB7DQpjb25zb2xlLmxvZygiMiIpOw0KfQ0KDQpmdW5jdGlvbiBkb1dvcmszKCkgew0KY29uc29sZS5sb2coIjMiKTsNCn0%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" height="500px" width="600px"></iframe>
+
+
+
+
+
+
+
+
+4.	הריצו בסימולטור שבלינק הנ"ל את הקוד הבא והבינו למה הוא מתנהג בצורה שבה הוא מתנהג:
+setTimeout(doWork1, 15000);
+setTimeout(doWork2, 10000);
+setTimeout(doWork3, 3000);
+
+function doWork1() {
+console.log("1");
+}
+
+function doWork2() {
+console.log("2");
+}
+
+function doWork3() {
+console.log("3");
+}
+
+<label>answer:</label>
+Will put the 3 setTimeout calls in the call stack , and each settimeout function will be performed in the Web Apis, first that will finish will go to the callback Queue and from there to the call stack (only when the call stack is empty)
+Prints: "3","2","1". because doWork3 timer is finished first
+<iframe src="http://latentflip.com/loupe/?code=c2V0VGltZW91dChkb1dvcmsxLCAxNTAwMCk7DQpzZXRUaW1lb3V0KGRvV29yazIsIDEwMDAwKTsNCnNldFRpbWVvdXQoZG9Xb3JrMywgMzAwMCk7DQoNCmZ1bmN0aW9uIGRvV29yazEoKSB7DQpjb25zb2xlLmxvZygiMSIpOw0KfQ0KDQpmdW5jdGlvbiBkb1dvcmsyKCkgew0KY29uc29sZS5sb2coIjIiKTsNCn0NCg0KZnVuY3Rpb24gZG9Xb3JrMygpIHsNCmNvbnNvbGUubG9nKCIzIik7DQp9!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" height="500px" width="600px"></iframe>
+
+5.	הריצו בסימולטור שבלינק הנ"ל את הקוד הבא והבינו למה הוא מתנהג בצורה שבה הוא מתנהג:
+setTimeout(doWork1, 10000);
+setTimeout(doWork2, 9000);
+setTimeout(doWork3, 8000);
+
+function doWork1() {
+console.log("1");
+}
+
+function doWork2() {
+console.log("2");
+}
+
+function doWork3() {
+console.log("3");
+}
+<label>answer:</label>
+same logic as in 4, but the different timers will bring different output for the console: "1","2","3" (because the timer of doWork1 finishes first)
+<iframe src="http://latentflip.com/loupe/?code=c2V0VGltZW91dChkb1dvcmsxLCAxMDAwMCk7DQpzZXRUaW1lb3V0KGRvV29yazIsIDkwMDApOw0Kc2V0VGltZW91dChkb1dvcmszLCA4MDAwKTsNCg0KZnVuY3Rpb24gZG9Xb3JrMSgpIHsNCmNvbnNvbGUubG9nKCIxIik7DQp9DQoNCmZ1bmN0aW9uIGRvV29yazIoKSB7DQpjb25zb2xlLmxvZygiMiIpOw0KfQ0KDQpmdW5jdGlvbiBkb1dvcmszKCkgew0KY29uc29sZS5sb2coIjMiKTsNCn0%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D" height="500px" width="600px"></iframe>
+
+בהצלחה 
+
+    </pre>
+</body>
+</html>
