@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2- display single user</title>
+    <script src="ajaxEx2.js" defer></script>
+</head>
+<body>
+    <pre dir="rtl">
+        שיעורי בית –הצגת משתמשבודד
+
+
+        צרו דף המכיל תיבת טקסט לקליטת id של משתמש ולחצן.
+        בלחיצה על הלחצן, בצעו גלישת AJAX לכתובת הבאה:
+        https://jsonplaceholder.typicode.com/users/<the-id>
+        כאשר במקום <the-id> יש לשרשר את ה-id שהמשתמש הכניס בתיבת הטקסט.
+        גלישה כזו תחזיר אובייקט אחד המתאר את המשתמש בעל ה-id הזה.
+        לדוגמה, הכנסת 5 בתיבה, תחזיר אובייקט JSON אחד של משתמש בעל id השווה ל-5.
+        הציגו בצורה אסתטית על הדף (לא בטבלה) את הפרטים הבאים של המשתמש שהוחזר:
+        •	שם
+        •	שם משתמש
+        •	אימייל
+        •	טלפון
+        •	עיר
+        •	רחוב
+        •	מיקוד
+        •	שם החברה
+        
+    </pre>
+    Enter the user ID:<input id="userId" onchange="onIDChange()">
+    <div id="res"></div>
+</body>
+</html>
