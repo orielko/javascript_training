@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master - Details</title>
+    <script src="ajaxEx4.js" defer></script>
+</head>
+<body>
+    <pre dir="rtl">
+        בלחיצה על לחצן, בצעו גלישת AJAX לכתובת הבאה, המחזירה מערך תמונות: 
+        https://jsonplaceholder.typicode.com/photos
+        הציגו בטבלה רק את 100 אובייקטי התמונות הראשונות שמוחזרות.
+        עבור כל תמונה יש להציג: 
+        •	albumId
+        •	id
+        •	title
+        •	thumbnailUrl כאשר ערך זה מכיל כתובת אונליין לתמונהשאותה יש להציג.
+        לדוגמה, אם המידע שנמצא במאפיין הזה הינו "https://via.placeholder.com/150/92c952" אז אין להציג את המידע הזה כמחרוזת, אלא יש להציג תמונה (תגית img) שמראה את התמונה הקיימת בלינק הזה (כלומר המאפיין src של התמונה מכיל את המחרוזת הזו), וכך רואים את התמונה עצמה בטבלה.
+        
+    </pre>
+    <label>result:</label><br>
+    <table id="picturesTable" border="1px">
+        <tr>
+            <td>albumId</td>
+            <td>id</td>
+            <td>title</td>
+            <td>image</td>
+        </tr>
+   
+    </table>
+</body>
+</html>

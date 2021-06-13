@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master - Details</title>
+    <script src="ajaxEx6.js" defer></script>
+</head>
+<body>
+    <pre dir="rtl">
+
+        האתר https://www.apixu.comמאפשר לקבל דיווחי מזג אוויר מכל העולם בחינם.
+        המידע מתקבל בצורת JSON.
+        יש לצורך כך להירשם באתר ע"י אימייל וסיסמה בלבד.
+        מיד אחרי ההרשמה נשלח אליכם מייל לאישור (ולכן יש לתת כתובת אמייל אמיתית).
+        לאחר ההרשמה אתם מקבלים API Key הדרוש לצורך קבלת המידע.
+        
+        בצעו את הדברים הבאים: 
+        
+        1.	הירשמו לאתר הנ"ל וקבלו את ה-API Key שלכם.
+        
+        2.	גילשו ע"י הדפדפן ללינק הבא לצורך בדיקה שאכן אתם מקבלים נתוני JSON של מזג אויר:
+        
+        https://api.weatherstack.com/current?access_key=YOUR_ACCESS_KEY&query=SOME_CITY
+        
+        כאשר:
+        YOUR_ACCESS_KEY זה ה-API Keyשקיבלתם, 
+        SOME_CITY זו עיר מסוימת באנגלית
+        ערך ה-query צריך להיות שם של עיר באנגלית עבורה ברצונם לקבל את מזג האויר.
+        לדוגמה, הלינק הבא מאפשר לקבל את מזג האוויר הנוכחי של ת"א (עבורAPI Key פיקטיבי):
+        
+        https://api.weatherstack.com/current?access_key=2e294349911204091811&query=Tel Aviv
+        
+        3.	צרו פרויקט חדש המאפשר למשתמש לבחור עיר ע"י תיבת Selectהמכילה רשימת ערים קבועה, ובלחיצה על לחצן מציג את מזג האוויר האמיתי שיש כרגע עבור העיר הזו.
+        
+        4.	הציגו ליד מזג האוויר גם את האייקון המייצג את מזג האוויר, המוחזר גם הוא ב-JSON.
+        
+        
+    </pre>
+    <label>result:</label><br>
+    <select id="citySelect" onchange="init()">
+        <option value="Tel Aviv" selected>Tel Aviv</option>
+        <option value="Haifa" >Haifa</option>
+        <option value="Rishon Letsiyon" >Rishon Letsiyon</option>
+    </select>
+    <div id="res">
+
+    </div>
+</body>
+</html>

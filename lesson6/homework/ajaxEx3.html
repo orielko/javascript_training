@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master - Details</title>
+    <script src="ajaxEx3.js" defer></script>
+</head>
+<body>
+    <pre dir="rtl">
+        שיעורי בית –הצגת רשימת משתמשים ומשתמש בודד
+
+קיים קונספט שנקרא Master-Details. 
+Master זה רשימת פריטים שבה עבור כל פריט מוצג חלק קטן מהמידע שקיים עבורו.
+Details זה כל המידע של אותו פריט שנבחר ברשימת ה-Master.
+לדוגמה, ניתן להציג רשימה של שמות מוצרים, כאשר בחירת שם מוצר מציגה את כל המידע של אותו מוצר.
+התרגיל הבא מיישם Master-Details:
+צרו דף שבטעינה שלו מבצע גלישת AJAX לכתובת הבאה המכילה את רשימת המשתמשים: 
+https://jsonplaceholder.typicode.com/users
+והציגו את שמות המשתמשים המוחזרים (ערך ה-name של כל משתמש) בתיבת select כאשר ה-value של כל פריט בתיבה צריך להיות ערך ה-id של כל משתמש.
+כלומר, תיבת ה-select מציגה את שמות המשתמשים אך ה-value מחזיק את ה-id שלהם.
+לדוגמה אחרי הגלישה ומילוי תיבת ה-select יהיו בה הנתונים הבאים: 
+    <select>
+        <option value="1">Leanne Graham</option>
+        <option value="2">Ervin Howell</option>
+        <option value="3">Clementine Bauch</option>
+        ...
+    </select>
+
+לאחר מכן, בכל בחירת משתמש מהתיבה–בצעו גלישת AJAX לכתובת הבאה:
+https://jsonplaceholder.typicode.com/users/<the-id>
+כאשר <the-id> זה קוד המשתמש שנבחר בתיבה (ערך ה-value), והציגו בצורה אסתטית על הדף את המאפיינים הנוספים שלו:
+•	שם
+•	שם משתמש
+•	אימייל
+•	טלפון
+•	עיר
+•	רחוב
+•	מיקוד
+•	שם החברה
+
+כלומר הלקוח שגולש לדף שלכם רואה בגלישה הראשונית את רשימת המשתמשים בתיבת select. אם הוא בוחר משתמש מהתיבה, הוא מיד רואה את שאר הפרטים שלו על הדף בצורה אסתטית.אין כאן שום לחצן נוסף על הדף. בחירת משתמש מתיבת ה-select מבצעת גלישת AJAX לשרת, מקבלת את המידע לגבי המשתמש הזה ומציגה אותו על הדף.
+
+    </pre>
+    <label>result:</label><br>
+    <select id="usersList" onchange="displaySelectedUser()"></select>
+    <div id="res"></div>
+</body>
+</html>
