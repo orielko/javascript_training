@@ -1,0 +1,58 @@
+    /* element name selector */
+    
+    p {
+        font-size: small;
+        text-decoration: underline;
+        background-color: black;
+    }
+    /* class selector */
+    
+    .cool {
+        color: lime;
+        background-color: blueviolet;
+    }
+    
+    .cool2 {
+        text-decoration: solid;
+        font-size: 10rem;
+    }
+    /* id selector */
+    
+    #bestP {
+        font-style: italic;
+        font-size: 2rem;
+    }
+    /* attribute selector */
+    
+    p[dir="rtl"] {
+        /* exact attribute selector */
+        border: 3px solid orangered;
+    }
+    /* general attribute selector */
+    
+    p[dir] {
+        color: navy
+    }
+    /* pseudo selector - we have set of pseudo actions within the CSS, press ':' to see all of them*/ 
+
+    a:hover {
+        color: blueviolet
+    }
+
+    /* when we have :: (twice) it means the browser is adding tags behind the scene but its also same action as at the regular pseudo */
+
+    p::first-letter{
+        color:red;
+    }
+
+     /* specifity of CSS (to Strongest)*/
+     /* tag -> attribute -> pseudo -> class -> id */
+/* importent will override all - not reccomended to use */
+     #bestP {
+        font-style: inherit!important; 
+        font-size: 4rem!important;
+    }
+    #bestP {
+        font-style: inherit; 
+        font-size: 2rem;
+    }
