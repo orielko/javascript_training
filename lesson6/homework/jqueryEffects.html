@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="jqueryEffects.js" defer></script>
+    <title>JQuery DOM</title>
+    <style>
+        body>* {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #fadeBlueButton {
+            background-color: blue;
+            color: white;
+            font-size: larger;
+        }
+
+        #fadeRedButton {
+            background-color: red;
+            color: white;
+            font-size: larger;
+        }
+
+        .squere {
+            color: white;
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 15px 15px 15px;
+        }
+
+        .redSquere {
+            background-color: red;
+        }
+
+        .blueSquere {
+            background-color: blue;
+        }
+
+        .board {
+            display: grid;
+        }
+
+        row {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="fadeBlueButton">Fade Out blue squeres</button>
+        <button id="fadeRedButton">Fade Out red squeres</button>
+    </div>
+    <div class="board">
+        <row>
+
+            <div class="squere redSquere">1</div>
+            <div class="squere blueSquere">2</div>
+            <div class="squere redSquere">3</div>
+            <div class="squere redSquere">4</div>
+            <div class="squere blueSquere">5</div>
+        </row>
+        <row>
+            <div class="squere blueSquere">6</div>
+            <div class="squere blueSquere">7</div>
+            <div class="squere blueSquere">8</div>
+            <div class="squere blueSquere">9</div>
+            <div class="squere redSquere">10</div>
+
+        </row>
+        <row>
+            <div class="squere redSquere">11</div>
+            <div class="squere blueSquere">12</div>
+            <div class="squere redSquere">13</div>
+            <div class="squere redSquere">14</div>
+            <div class="squere redSquere">15</div>
+
+        </row>
+    </div>
+</body>
+
+</html>
