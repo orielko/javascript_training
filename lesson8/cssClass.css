@@ -1,0 +1,41 @@
+.container > div{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    align-items:center;
+    line-height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.classEx{
+    width: 200px;
+    height: 100px;
+    background-image: linear-gradient(45deg,yellow,black,red,purple,blue);
+    border-radius: 25px;
+    border:1px solid black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: center;
+    line-height: 100px;
+    font-family: MyShetockFont;
+    color:white;
+    font-size: x-large;
+    box-shadow: 2px 7px 20px black;
+    animation: rotateMe 2s linear infinite;
+}
+@font-face {
+    font-family: MyShetockFont;
+    src: url("assets/fonts/ShetockFont.ttf");
+}
+
+@keyframes rotateMe {
+    from{  
+        transform: rotate(360deg)
+    }
+    to{   
+        transform: rotate(0deg)
+    }
+}

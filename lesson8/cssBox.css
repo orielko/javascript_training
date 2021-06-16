@@ -1,0 +1,31 @@
+div{
+    width: 300px; /*by default the width and height is given to the contect*/
+    height: 170px;
+    box-sizing: border-box;/*to include the border+padding in the width and height size above*/
+    border: 1px solid black;
+    line-height: 70px; /*to center the text verticallly- works only for 1 line*/
+    text-align: center;
+}
+
+p{
+    background-color: aquamarine;
+}
+
+p.lon{
+    width: 300px;
+}
+span{
+    background-color: yellowgreen;
+}
+
+.makeInline{
+    display: inline-block;
+}
+
+.makeBlock{
+    display: block;
+}
+
+.makeMeHidden{
+    display:none;
+}

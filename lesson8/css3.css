@@ -1,0 +1,104 @@
+div{
+    width: 100px;
+    height: 70px;
+    border:1px solid black;
+    margin:10px;
+    display: inline-block;
+    text-align: center;
+    background-color: bisque;
+    vertical-align: top;/*default 'vertical-align' for 'display:inline-block' is 'baseline'*/
+    padding: 10px;
+}
+
+/* nth child is the n-th' child */
+div:nth-child(1){
+    border-radius: 10px;
+    /* border-radius: 10px 20px; */
+    /* border-radius: 10px 20px 30px 40px; */
+}
+div:nth-child(2){
+    box-shadow: 5px -10px 5px yellow; /*- for direction,right, bottom, blur, color */
+    /* border-radius: 10px 20px; */
+    /* border-radius: 10px 20px 30px 40px; */
+    text-shadow: 3px 2px 1px blue;
+}
+
+div:nth-child(3){
+    background-image: linear-gradient(red,green,black);
+}
+
+div:nth-child(4){
+    background-image: linear-gradient(45deg,red,green,black);
+}
+div:nth-child(5){
+   font-family: 'MyShetockFont','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/*Geneva and Verdana are font families, sans-serif: is a font without serif (sharp edges on the font)*/
+}
+
+/*to have a custom font*/
+@font-face {
+    font-family: MyShetockFont;
+    src: url("assets/fonts/ShetockFont.ttf");
+}
+
+div:nth-child(6){
+    transform: skew(30deg);
+}
+div:nth-child(7){
+    transform: rotate(30deg);
+}
+div:nth-child(8){
+    transform: translate(30px,30px);
+}
+div:nth-child(9){
+    transform: scale(2) translate(70px,70px);
+}
+div:nth-child(10):hover{
+    transform: scale(2);
+    background-color: aquamarine;
+    transition: background-color,transform 2s;
+    /* transition: all 2s; for all the transitions */
+}
+
+/* for the reverse effect for the transition of the element: */
+div:nth-child(10){
+    transition: background-color,transform 2s;
+
+}
+div:nth-child(11){
+    /* animation name, duration,speed type, endless, alternate is to do the reverse on the back*/
+    animation: myAnimation 2s linear infinite alternate;
+
+}
+div:nth-child(12){
+    /* animation name, duration,speed type, endless, alternate is to do the reverse on the back*/
+    animation: myAnimation2Parts 2s linear infinite alternate;
+
+}
+
+@keyframes myAnimation {
+    0%{transform: translate(70px,70px);}
+    7%{transform: translate(170px,170px);}
+    90%{transform: translate(270px,270px);}
+    100%{transform: translate(370px,370px);}
+}
+@keyframes myAnimation2Parts {
+    from{  
+        transform: scale(2);
+        background-color: aquamarine;
+    }
+    to{   
+        transform: scale(0.5);
+        background-color: cadetblue;
+    }
+}
+
+article{
+    /* columns: 3; */
+    column-width: 200px;
+    text-align: justify;/*align to right and also left*/
+    column-gap:30px;
+    column-rule: 10px double silver;
+}
+
+
+

@@ -1,0 +1,31 @@
+
+/* all the <a> under <p> (not only direct) */
+/* p a {
+    color:red;
+} */
+
+/* all the <a> under <p> ( only direct) */
+/* p> a {
+    color:purple;
+} */
+
+
+ /* All the <a> which is exacly bellow (near) <p> */
+ /* p + a {
+     color:aqua;
+    } */
+    
+/* All the <a> which is bellow (near) <p> */
+/* p ~ a{
+    color:chartreuse;
+}  */
+
+p{
+    color:green; /*inherit by default*/
+    border:2px solid blue; /*will not inherit by default*/
+}
+
+/* will make the border to be inherited */
+#mySpan{
+    border: inherit;
+}
