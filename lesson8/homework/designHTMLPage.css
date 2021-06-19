@@ -1,0 +1,40 @@
+img{
+    height: 150px;
+    width: 150px;
+
+}
+body{
+    direction:rtl;
+    background-image: url("https://img3.goodfon.com/wallpaper/nbig/5/91/parquet-parket-tekstura.jpg");
+}
+input[type="text"],input[type="password"]{
+    background-color: yellow;
+}
+input[type="submit"]{
+    background-color: aqua;
+}
+#copyrights{
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    color: brown;
+}
+hr{
+    border:1px solid gainsboro;
+    width: 100%;
+}
+p{
+    text-align: center;
+}
+
+#img-container{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.login-table{
+    text-align: end;
+    border: 2px solid black;
+}
