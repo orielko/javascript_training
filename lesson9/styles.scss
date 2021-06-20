@@ -1,0 +1,185 @@
+//There are 3 languages for CSS:
+//SASS: Syntactically awsome style sheet
+//SCSS: Sassy CSS
+//LESS: Leaner style sheets
+
+//Compiler: Live SASS compiler extenstion to compile
+
+//Nesting
+//in normal css: p span {color:red;} -> space is any span under p
+p{
+    span{
+        color:red;
+    }
+}
+
+p{
+    > span{
+        background-color: aquamarine;
+    }
+}
+
+p{
+    a{
+        span{
+            font-size: x-large;
+        }
+    }
+}
+
+//Extend
+td{
+    border: 1px solid blue;
+    text-align: center;
+    color: darkcyan;
+    background-color: aqua;
+}
+
+th{
+    //same as td
+    @extend td;
+    font-size: x-large;
+    font-style: italic;
+    background-color: lightgray;
+}
+
+//variables
+$box-color:yellow;
+$box-width:300px;
+
+input[type=text]{
+    background-color: $box-color;
+    width:$box-width;
+}
+
+textarea{
+    background-color: $box-color;
+    width: $box-width;
+    height: 70px;
+}
+
+//operators
+$thickness:2px;
+
+input[type=url]{
+    border: $thickness - 1 solid black;
+}
+input[type=tel]{
+    border: $thickness * 2 solid black;
+}
+
+//Mixin - like a function
+@mixin ad-box {
+    font-size: xx-large;
+    text-align: center;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px gray;
+}
+
+@mixin colorful-box($color1:red,$color2:yellow,$color3:blue){
+    border:2px solid black;
+    background-image: linear-gradient(45deg, $color1,$color2,$color3);
+}
+
+.paid-ad{
+    @include ad-box();
+    @include colorful-box();
+    color:green;
+}
+
+.free-ad{
+    @include ad-box();
+    @include colorful-box(black,gray, white)
+}
+
+//functions (returns a value)
+@function enlarge($value,$percent){
+    @return $value*(1+$percent/100);
+}
+
+$original-size:20px;
+
+.funny{
+    font-size: enlarge($original-size,10 );
+}
+.cute{
+    font-size: enlarge($original-size,50 );
+}
+
+//Built-in functions
+$font-color:yellow;
+#kittens{
+    color:lighten($font-color,20);
+}
+#puppies{
+    color:darken($font-color,20);
+}
+
+//if-else
+$theme: "Dark";
+input[type=email]{
+    @if($theme=="Dark"){
+        background-color: darkkhaki;
+    }
+    @else{
+        background-color: lightgoldenrodyellow;
+    }
+}
+//we can also put the CSS block inside the IF ELSE
+@if($theme=="Dark"){
+    input[type=email]{
+        font-weight: bold;
+    }
+
+}
+@else{
+    input[type=email]{
+        font-style: italic;
+    }
+}
+
+//lists, nth() returns an element from the list, params: list, index
+$colors:red green blue;
+li:nth-child(1){
+    color:nth($colors,1)
+}
+li:nth-child(2){
+    color:nth($colors,2)
+}
+li:nth-child(3){
+    color:nth($colors,3)
+}
+
+//While loop
+$n:1;
+@while ($n<=3){
+    //for the variable we must use intapulation for $n: #{$n}
+    h4:nth-of-type(#{$n}){
+        display:inline-block;
+        font-size: $n*10px;
+    }
+    $n:$n+1;
+}
+
+//for loop
+@for $i from 1 to 4{//include 1 , not inclue 4
+    h5:nth-of-type(#{$i}){
+        display: inline-block;
+        font-size: $i*20px;
+    }
+}
+
+//each , running on collection
+$animals:bunny kitten puppy;
+@each $item in $animals{
+    .#{$item}-image{
+        border:1px solid black;
+        width: 80px;
+        height: 60px;
+        margin:5px;
+        display: inline-block;
+        background-image: url("assets/images/#{$item}.jpg");
+    }
+}
