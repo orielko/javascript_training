@@ -1,0 +1,10 @@
+@for $i from 1 to 11{
+    div:nth-child(#{$i}){
+        border:1px solid black;
+        width: 150px;
+        height: 150px;
+        margin:5px;
+        display: inline-block;
+        background-image: url("assets/images/#{$i}.jpg");
+    }
+}
