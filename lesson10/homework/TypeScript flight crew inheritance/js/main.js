@@ -4,6 +4,21 @@ import LandSteward from "./LandSteward.js";
 import Passenger from "./Passenger.js";
 import { Persons } from "./Person.js";
 import AttendentEmployee from "./AttendantEmployee.js";
+function report(person) {
+    return `
+    <br>
+    -------------Report---------<br>
+    
+    Time: ${new Date()}<br>
+    ----------------------------<br>
+    Details:<br>
+    ----------------------------<br>
+    ${person.display()}<br>
+    ----------------------------<br>
+    ------------End-------------<br>
+    <br>
+    `;
+}
 let pilot = new Pilot("Harrison", "Ford", 5, "2244223");
 let flightAttendent = new FlightAttendant("Carole", "Elizabeth Middleton", 6, "UK", Departments.FirstClass);
 let someLandSteward = new LandSteward("Ellen", "Church", 17, "Sweden", "Tickets");
@@ -44,3 +59,8 @@ if (person instanceof AttendentEmployee) {
 if (person instanceof Passenger) {
     document.getElementById("randomPersonDetailsExtra").innerHTML += person.getPassport();
 }
+//Polymorphism part
+document.getElementById("reports").innerHTML += report(pilot);
+document.getElementById("reports").innerHTML += report(flightAttendent);
+document.getElementById("reports").innerHTML += report(someLandSteward);
+document.getElementById("reports").innerHTML += report(passenger);
