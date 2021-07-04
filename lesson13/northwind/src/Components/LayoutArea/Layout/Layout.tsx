@@ -1,14 +1,14 @@
 import Header from "../../Header/Header";
-import Home from "../../HomeArea/Home/Home";
 import Footer from "../Footer/Footer";
 import Menu from "../Menu/Menu";
+import Routing from "../Routing/Routing";
 import "./Layout.css";
 function Layout():JSX.Element{
     return (
         <div className="Layout">
             <header><Header/></header>
             <aside><Menu/></aside>
-            <main><Home/></main>
+            <main><Routing/></main>
             <footer><Footer/></footer>
         </div>
     );

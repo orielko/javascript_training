@@ -1,9 +1,0 @@
-.Menu{
-    display: flex;
-    flex-direction: column;
-}
-
-.Menu a{
-    margin: 15px;
-    color: blue;
-}
