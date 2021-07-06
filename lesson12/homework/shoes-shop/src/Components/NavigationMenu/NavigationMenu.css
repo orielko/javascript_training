@@ -1,0 +1,17 @@
+.NavigationMenu{
+}
+
+.NavigationMenu > .links{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    
+}
+.NavigationMenu > .links > a{
+
+    margin:20px;
+    
+}
+
+
+
