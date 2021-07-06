@@ -1,0 +1,35 @@
+html,body{
+    height: 100%;
+}
+
+.Layout {
+	display: grid;
+    border:1px black solid;
+    grid-template-columns: 50% 50%;
+    margin:5px;
+    height: 100%;
+}
+
+
+
+.Layout > .Header{
+    border:1px black solid;
+    color:blueviolet;
+    align-items: center;
+    grid-column: span 2;
+    margin:5px;
+    text-align: center;
+}
+.Layout > .Details{
+    border:1px black solid;
+    grid-row: span 1;
+    margin:5px;
+    padding: 10px;
+}
+.Layout > .Skills{
+    border:1px black solid;
+    grid-row: span 1;
+    margin:5px;
+    padding: 10px;
+
+}
