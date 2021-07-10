@@ -10,6 +10,7 @@ function Routing(): JSX.Element {
         <div className="Routing">
             {/* this is the routing mechanism, we configure here for which route which component will be displayed */}
             {/* it takes the first which is matching, so it could also take the first for /home/here unless we add "exact" attribute */}
+	{/*package for Routes: npm i --save-dev @types/react-router-dom */}
             <Switch>
                 <Route path="/home" component={Home} exact />
                 <Route path="/products" component={ProductList} exact />
