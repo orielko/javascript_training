@@ -1,0 +1,8 @@
+.Shoes {
+	border: 1px solid black;
+}
+
+.Shoes > img{
+    width: 180;
+    height: 120px;
+}
