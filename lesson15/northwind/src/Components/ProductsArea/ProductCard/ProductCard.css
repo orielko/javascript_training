@@ -1,0 +1,19 @@
+.ProductCard.Box{
+	width: 300px;
+    display: inline-flex;
+    align-items: center;
+    padding-right: 0;
+}
+.ProductCard img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 5px;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+
+.ProductCard.Box > div:last-child {
+    margin-left: auto;
+}
