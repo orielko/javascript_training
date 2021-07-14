@@ -1,0 +1,16 @@
+.Menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu a{
+    margin: 15px;
+    color: blue;
+}
+
+/* to design the active nav, we do it in the "active" class */
+
+.Menu > .active{
+    color:green;
+    font-weight: bold;
+}

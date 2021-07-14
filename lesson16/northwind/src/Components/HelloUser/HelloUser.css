@@ -1,0 +1,17 @@
+.HelloUser {
+	position:absolute;
+    right:20px;
+    top:10px;
+    display: grid;
+}
+
+.HelloUser a{
+    top:20px;
+    display: inline-block;
+    margin: 10px;
+    padding: 0 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    text-align: center;
+}
